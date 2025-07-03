@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+/* * {
+    font-family: outfit;
+} */
+
+@theme {
+    --font-display: "Poppins", "sans-serif";
+    --breakpoint-3xl: 1920px;
+    --color-primary: #875cf5;
+}
+
+@layer base {
+    html {
+        font-family: var(--font-display);
+    }
+
+    body {
+        background-color: #fcfbfc;
+        overflow: hidden;
+    }
+}
+
+
+@theme {
+    --tracking-1: -0.1em;
+    --tracking-2: 0.025em;
+    --tracking-3: 0.05em;
+    --tracking-4: 1em;
+}
+
+.input-box {
+    @apply h-10 w-full flex justify-between gap-3 text-sm text-black bg-slate-100 rounded px-4 mb-4 mt-3 border border-slate-200 outline-none;
+}
+
+.btn-primary {
+    @apply w-full text-[15px] font-medium text-white -tracking-1 bg-emerald-500 shadow-lg shadow-green-600/5 p-[10px] rounded-md my-1 hover:bg-green-500/15 hover:text-black;
+}
+
+.card {
+    @apply bg-white p-6 rounded-2xl shadow-md shadow-gray-100 border border-gray-200/50;
+}
+
+.card-btn {
+    @apply flex items-center gap-1 text-[12px] font-medium text-gray-700 hover:bg-slate-200 bg-gray-50 px-4 py-1.5 rounded-lg border border-gray-200/50 cursor-pointer;
+}
+
+.animated-circle-1 {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(139, 92, 246, 0.5);
+    /* violet-500 with transparency */
+    z-index: -10;
+    animation: moveAround 12s ease-in-out infinite;
+}
+
+.animated-circle-2 {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(92, 246, 164, 0.5);
+    /* violet-500 with transparency */
+    z-index: -10;
+    animation: moveAround 12s ease-in-out infinite;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 10%;
+        left: 10%;
+    }
+
+    25% {
+        top: 20%;
+        left: 80%;
+    }
+
+    50% {
+        top: 70%;
+        left: 60%;
+    }
+
+    75% {
+        top: 80%;
+        left: 20%;
+    }
+
+    100% {
+        top: 10%;
+        left: 10%;
+    }
+}
